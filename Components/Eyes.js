@@ -11,7 +11,6 @@ const Eyes = () => {
       let deltaY = mouseY - innerHeight / 2;
       let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
       setrotate(angle - 180);
-      //   console.log(rotate);
     });
   });
 
