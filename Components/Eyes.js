@@ -5,7 +5,8 @@ const Eyes = () => {
   let [rotate, setrotate] = useState(0);
   const [rotatea, setrotatea] = useState(0);
   useEffect(() => {
-    window.addEventListener("mousemove", (e) => {
+    let a = document.querySelector("#sat");
+    a.addEventListener("mousemove", (e) => {
       let mouseX = e.clientX;
       let mouseY = e.clientY;
       let deltaX = mouseX - innerWidth / 2.5;
@@ -28,7 +29,10 @@ const Eyes = () => {
         data-scroll-speed="1"
         className="eyes w-full h-full flex justify-center items-center   overflow-hidden"
       >
-        <div className=" flex justify-center items-center w-full h-screen bg-cover  bg-center bg-[url('https://wallpaperaccess.com/full/2364379.jpg')]">
+        <div
+          id="sat"
+          className=" flex justify-center items-center w-full h-screen bg-cover  bg-center bg-[url('https://wallpaperaccess.com/full/2364379.jpg')]"
+        >
           <div className=" w-[40vw] h-[40vw] flex  items-center gap-4 justify-center  ">
             <div className="flex justify-center items-center w-1/2 h-1/2 bg-zinc-500  rounded-full ]">
               <div className=" relative w-2/3 h-2/3 bg-zinc-950  rounded-full ]">
