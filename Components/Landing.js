@@ -1,17 +1,38 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { FaLongArrowAltUp } from "react-icons/fa";
 
 const Landing = () => {
   return (
-    <>
-      <div className="w w-full h-screen bg-zinc-950  pt-1">
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ rotate: 360, scale: 1 }}
+      transition={{
+        type: "keyframes",
+        duration: 1,
+        stiffness: 200000,
+        damping: 10,
+      }}
+      className="w w-full h-screen bg-zinc-950  pt-[20vh]"
+    >
+      <div
+        data-scroll
+        data-scroll-section
+        data-scroll-speed="-.2"
+        className="w w-full h-screen bg-zinc-950  pt-1"
+      >
         <div className="textstructure mt-24 ml-20">
           {["we create ", " eye-opening ", " Presentations "].map((Item, i) => {
             return (
               <div key={i} className="MASKER">
-                <div className=" w-fit flex">
+                <div className=" w-fit flex overflow-hidden">
                   {i === 1 && (
-                    <div className=" w-14 h-10 bg-green-400 relative top-1"></div>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: "10vw" }}
+                      transition={{ ease: [5, 8, 2, 5], duration: 1 }}
+                      className=" w-14 h-10 bg-red-500 relative top-1"
+                    ></motion.div>
                   )}
                   <p className="  tracking-tight uppercase leading-14 text-5xl font-semibold">
                     {Item}
@@ -43,7 +64,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

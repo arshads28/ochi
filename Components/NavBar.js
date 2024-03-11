@@ -1,9 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   return (
     <>
-      <div className=" fixed z-[999] w-full px-14 py-6 flex justify-between  items-center">
+      <div className=" fixed z-[1] w-full px-14 py-6 flex justify-between  items-center">
         <div className="logo ">arsh</div>
         <div className="links flex gap-5">
           {[
